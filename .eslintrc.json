@@ -1,0 +1,44 @@
+{
+  "$schema": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/eslintrc.json",
+  "root": true,
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "plugins": ["unused-imports", "deprecation", "@typescript-eslint/eslint-plugin"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["tsconfig.json"],
+        "createDefaultProgram": true
+      },
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off",
+        "no-var": "error",
+        "no-constructor-return": "error",
+        "no-unreachable-loop": "error",
+        "no-unmodified-loop-condition": "error",
+        "yoda": "error",
+        "prefer-regex-literals": "error",
+        "eqeqeq": "error",
+        "no-lonely-if": "error",
+        "max-depth": "error",
+        "require-await": "error",
+        "prefer-spread": "error",
+        "complexity": "error",
+        "no-unneeded-ternary": "error",
+        "deprecation/deprecation": "error",
+        "unused-imports/no-unused-imports": "error",
+        // Note: Disable base rule as it can report incorrect errors
+        "no-unused-vars": "off",
+        "unused-imports/no-unused-vars": [
+          "error",
+          {
+            "vars": "all",
+            "varsIgnorePattern": "^_",
+            "args": "after-used",
+            "argsIgnorePattern": "^_"
+          }
+        ]
+      }
+    }
+  ]
+}
