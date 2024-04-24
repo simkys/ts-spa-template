@@ -1,6 +1,6 @@
 # ts-spa-template
 
-A template for creating single page application (SPA).
+A template for creating single page applications (SPA).
 
 Included is the following tech stack:
 
